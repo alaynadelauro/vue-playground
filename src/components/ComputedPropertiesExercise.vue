@@ -29,7 +29,7 @@ export default {
         // IF IT WAS SUPPOSED TO RETURN SOMETHING THEN WHY IS IT COMPLETELY BROKEN NO MATTER WHAT I PUT THERE???
       ),
     });
-    // I cant even commit changes now
+    // I gave up because nothing works anymore, going to work on my journal instead
     return {
       state,
     };
