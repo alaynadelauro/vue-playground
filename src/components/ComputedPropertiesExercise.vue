@@ -4,8 +4,8 @@
       <div class="col-12">
         <div class="border p-1">
           <div class="reverse-message">
-            <p>Original Message: {{}}</p>
-            <p>Computed Reversed Message: {{}}</p>
+            <p>Original Message: {{ state.message }}</p>
+            <p>Computed Reversed Message: {{ state.reversedMessage }}</p>
           </div>
         </div>
       </div>
@@ -23,10 +23,11 @@ export default {
     const state = reactive({
       // After getting this to work, challenge yourself to add an input field and bind message to it, so as you type the messag gets reversed!
       message: "Hello World!",
-      reversedMessage: computed(() => {
+      reversedMessage: computed(() =>
+        state.message.split("").reverse().join('')
         // all computed properties must return a value, what do you want this one to return?
-        return "";
-      }),
+        // IF IT WAS SUPPOSED TO RETURN SOMETHING THEN WHY IS IT COMPLETELY BROKEN NO MATTER WHAT I PUT THERE???
+      ),
     });
     return {
       state,
@@ -36,5 +37,4 @@ export default {
 </script>
 
 
-<style scoped>
-</style>
+<style scoped></style>
